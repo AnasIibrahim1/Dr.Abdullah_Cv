@@ -13,11 +13,12 @@
 
 /* 0- Global Variables */
 :root {
-    --main-color: #0f9b0f;
-    --over-color : #252525;
+    --main-color: #03C03C;
+    --over-color : #00674b;
     --white-color : white;
     --hoverd-color : #284B63;
-    --paragraph-color : rgb(51, 255, 0);
+    --paragraph-color : rgb(197, 235, 187);
+    --animation-color :#0a680a;
 }
 
 /* 0.1- Global & Stacks Styles */
@@ -145,7 +146,6 @@ p{
     width: 80%;
     border: 5px solid transparent;
     outline: 2px solid var(--white-color);
-    animation: borderAnimation 3s infinite;
 }
 
 /* 1.6- Cv Toggle */
@@ -268,7 +268,7 @@ p{
         color: var(--white-color);
     }
     50% {
-        color: #0a680a;
+        color: var(--animation-color);
     }
     100% {
         color: var(--white-color);
@@ -282,19 +282,5 @@ p{
     to {
         transform: translateX(0) scaleX(1);
         opacity: 1;
-    }
-}
-@keyframes borderAnimation {
-    0% {
-        border-color: transparent;
-        background-color: var(--main-color);
-    }
-    50% {
-        border-color: #ffffff;
-        background-color: #0a680a;
-    }
-    100% {
-        border-color: transparent;
-        background-color: var(--main-color);
     }
 }
