@@ -13,12 +13,12 @@
 
 /* 0- Global Variables */
 :root {
-    --main-color: #03C03C;
-    --over-color : #00674b;
-    --white-color : white;
-    --hoverd-color : #284B63;
-    --paragraph-color : rgb(197, 235, 187);
-    --animation-color :#0a680a;
+    --main-color: white;
+    --over-color : #ffffff;
+    --white-color : rgb(0, 0, 0);
+    --hoverd-color : #000000;
+    --paragraph-color : #3A6D51;
+    --animation-color :#000000;
 }
 
 /* 0.1- Global & Stacks Styles */
@@ -32,19 +32,19 @@
     color : var(--white-color);
 }
 body{
-    background: linear-gradient(to top, var(--over-color), var(--main-color));
-    /* background: linear-gradient(to bottom, #636363, #a2ab58); */
-    /* background: linear-gradient(to bottom, #6e8b1d, #acbb78); */
+    background: linear-gradient(to bottom, rgb(58, 109, 81, 0.8), rgb(58, 109, 81, 0.2));
     min-height: 100vh;
 }
 h2{
     font-size: 34px;
+    color: white !important;
 }
 h3{
     font-size: 28px;
 }
 h6{
     font-size: 18px;
+    color: white !important;
 }
 p{
     font-size: 16px;
@@ -55,7 +55,7 @@ p{
     animation : scale 1s ease-in-out;
 }
 .white{
-    color: var(--white-color) !important;
+    color: var(--main-color) !important;
 }
 .cv_section{
     display: none;
@@ -89,17 +89,16 @@ p{
     right: 0;
     z-index: 1;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 .cv_aside:hover {
     width: 10%;
-    box-shadow: 0 0 15px rgba(15, 155, 15, 0.6);
 }
 .cv_aside .aside_list .section {
     transition: all 0.3s ease-in-out;
 }
 .cv_aside .aside_list .section:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 .cv_aside .aside_list{
     display: flex;
@@ -123,18 +122,17 @@ p{
     flex-direction: row;
 }
 .cv_sections{
-    background-color: var(--main-color);
+    background: rgba(166, 201, 182, 0.486);
     padding: 30px;
     width: 60%;
 }
 .cv_section{
-    color: black;
+    color: white;
 
 }
 
 /* 1.5- Cv Image */
 .cv_img{
-    background: linear-gradient(to top, var(--over-color), var(--main-color));
     width: 40%;
     display: flex;
     justify-content: center;
@@ -196,16 +194,17 @@ p{
     }
     .cv_aside:hover {
         width: 100%;
-        box-shadow: 0 0 15px rgba(15, 155, 15, 0.6);
     }
     .cv_content{
         width: 100%;
         flex-direction: column;
+    }
         .cv_sections{
         width: 100%;
     }
     .cv_img{
         width: 100%;
+        margin-top: 20px;
         border-radius: 0;
         background : none;
 
@@ -214,12 +213,10 @@ p{
         width: 50%;
     }
     .cv_sections{
-        background : none;
-
     }
     }
 
-}
+
 
 /* 6- Scroll Customization */
 ::-webkit-scrollbar {
